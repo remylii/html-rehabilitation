@@ -1,5 +1,34 @@
-h1 {
-  color: #f22;
+body {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #ccc;
+  border: 1px solid #777;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple .ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  transform: scale(0);
+  background: #fff;
+  animation: ripple 700ms;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
