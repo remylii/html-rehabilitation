@@ -1,0 +1,27 @@
+{
+  "name": "html-rehabilitation",
+  "version": "0.0.1",
+  "description": "html rehabilitation.",
+  "main": "index.js",
+  "scripts": {
+    "production": "npm run production-pug & npm run production-sass",
+    "production-pug": "pug ./src/pug --out ./dist/",
+    "production-sass": "node-sass ./src/scss/App.scss --output ./dist/css --output-style compressed",
+    "develop": "npm run develop-pug & npm run develop-sass",
+    "develop-pug": "pug ./src/pug --out ./src/assets/ --pretty",
+    "develop-sass": "node-sass ./src/scss/App.scss --output ./src/assets/css --output-style expanded --source-map true",
+    "watch": "npm run watch-pug & npm run watch-sass",
+    "watch-pug": "watch 'npm run develop-pug' ./src/pug --interval=0.5",
+    "watch-sass": "watch 'npm run develop-sass' ./src/scss --interval=0.5"
+  },
+  "author": "remyli",
+  "license": "MIT",
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
