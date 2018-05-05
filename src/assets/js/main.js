@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/assets/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -79,8 +79,37 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar ripple_effect = function ripple_effect(event) {\n  var cover = document.createElement('span');\n  var coversize = event.target.offsetWidth;\n  var loc = event.target.getBoundingClientRect();\n  var x = event.pageX - loc.left - window.pageXOffset - coversize / 2;\n  var y = event.pageY - loc.top - window.pageYOffset - coversize / 2;\n  var pos = 'top: ' + y + 'px; left: ' + x + 'px; height: ' + coversize + 'px; width: ' + coversize + 'px;';\n\n  event.target.appendChild(cover);\n  cover.setAttribute('style', pos);\n  cover.classList.add('ripple-effect');\n\n  var remove_child = function remove_child(target) {\n    return new Promise(function (resolve) {\n      setTimeout(function () {\n        target.querySelector(\".ripple-effect\").remove;\n        resolve();\n      }, 200);\n    });\n  };\n\n  remove_child(event.target);\n};\n\ndocument.querySelectorAll('.ripple').forEach(function (elem) {\n  elem.addEventListener('mousedown', ripple_effect);\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+
+var ripple_effect = function ripple_effect(event) {
+  var cover = document.createElement('span');
+  var coversize = event.target.offsetWidth;
+  var loc = event.target.getBoundingClientRect();
+  var x = event.pageX - loc.left - window.pageXOffset - coversize / 2;
+  var y = event.pageY - loc.top - window.pageYOffset - coversize / 2;
+  var pos = 'top: ' + y + 'px; left: ' + x + 'px; height: ' + coversize + 'px; width: ' + coversize + 'px;';
+
+  event.target.appendChild(cover);
+  cover.setAttribute('style', pos);
+  cover.classList.add('ripple-effect');
+
+  var remove_child = function remove_child(target) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        target.querySelector(".ripple-effect").remove;
+        resolve();
+      }, 200);
+    });
+  };
+
+  remove_child(event.target);
+};
+
+document.querySelectorAll('.ripple').forEach(function (elem) {
+  elem.addEventListener('mousedown', ripple_effect);
+});
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map

@@ -1,8 +1,16 @@
 const path = require('path');
 
 module.exports = {
-  mode: "production",
+  mode: "development",
 
+  entry: "./src/js/index.js",
+  output: {
+    path: path.resolve(__dirname, 'src/assets/js'),
+    filename: "main.js",
+    publicPath: "/assets/"
+  },
+
+  context: __dirname,
   module: {
     rules: [
       {
@@ -16,13 +24,19 @@ module.exports = {
   },
 
   devtool: "source-map",
-  context: __dirname,
   target: "web",
 
+  resolve: {
+    modules: [
+      "node_modules", path.resolve(__dirname, "src/js")
+    ]
+  },
+
   devServer: {
-    contentBase: path.join(__dirname, 'src/assets'),
+    contentBase: path.resolve(__dirname, 'src/assets'),
     compress: true,
     historyApiFallback: true,
+    watchContentBase: true,
     hot: true
   }
 }

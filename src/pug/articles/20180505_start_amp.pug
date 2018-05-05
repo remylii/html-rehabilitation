@@ -1,0 +1,53 @@
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title start amp | Document
+    link(rel="canonical", href="http://localhost/20180505_start_amp.html")
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    link(rel="stylesheet", href="css/App.css")
+    script(type="application/ld+json")
+      | {
+      |   "@context": "http://schema.org",
+      |   "@type": "NewsArticle",
+      |   "headline": "Open-source framework for publishing content",
+      |   "datePublished": "2018-05-05T15:00:00+09:00"
+      | }
+    style(amp-boilerplate)
+      | body {
+      |   -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      |   -moz-animation:-ampstart 8s steps(1,end) 0s 1 normal both;
+      |   -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      |   animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      | }
+      |
+      | @-webkit-keyframes -amp-start {
+      |   from {visibility: hidden;}
+      |   to {visibility: visible;}
+      | }
+      | @-moz-keyframes -amp-start {
+      |   from {visibility: hidden;}
+      |   to {visibility: visible;}
+      | }
+      | @-ms-keyframes -amp-start {
+      |   from {visibility: hidden;}
+      |   to {visibility: visible;}
+      | }
+      | @keyframes -amp-start {
+      |   from {visibility: hidden;}
+      |   to {visibility: visible;}
+      | }
+      noscript
+        style(amp-boilerplate)
+          | body {
+          |   -webkit-animation: none;
+          |   -moz-animation: none;
+          |   -ms-animation: none;
+          |   animation: none;
+          | }
+    script(async, src="https://cdn.ampproject.org/v0.js")
+  body
+    h1 start amp
+    main.main
+      AMP|タグを作ってみる
+    script(src="js/main.js")
