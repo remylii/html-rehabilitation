@@ -7,13 +7,12 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
     link(rel="stylesheet", href="css/App.css")
   body
-    h1 Document index
+    header
+      | Header contents area.
     main.main
-      div
-        a(href="articles/20180505_start_amp.html")
-          |普通の 20180505_start_amp.html
-      div
-        a(href="articles/20180505_start_amp.html#development=1")
-          |#development=1 をつけた 20180505_start_amp.html
-      .box.ripple(style="width: 200px; height: 300px;") box-area
+      h1 Document index
+      a(href="./articles/20180513_develop_env_for_htmlcoder_2018.html") リンク1
+      h2 Ripple Effect
+      .box.ripple box-area
+    footer Footer contents area.
     script(src="js/main.js")
