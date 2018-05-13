@@ -5,14 +5,27 @@ html(lang="ja")
     title Document
     link(rel="canonical", href="http://localhost/index.html")
     meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
-    link(rel="stylesheet", href="css/App.css")
+    link(rel="stylesheet", href="/css/App.css")
   body
     header
-      | Header contents area.
+      include _partials/_header.pug
     main.main
       h1 Document index
-      a(href="./articles/20180513_develop_env_for_htmlcoder_2018.html") リンク1
-      h2 Ripple Effect
-      .box.ripple box-area
+      | サンプル
+    nav
+      h4 This is navigation section.
+        ul
+          li
+            a(href="/") articles
+          li
+            a(href="/") about
+    aside
+      h4 This is an aside section. articles
+      ul
+        li
+          a(href="./articles/20180513_develop_env_for_htmlcoder_2018.html")
+            | HTMLコーダーの開発環境 2018年春
+        li
+          a(href="./articles/20180501_ripple_effect_sample.html") Ripple Effect Sample
     footer Footer contents area.
-    script(src="js/main.js")
+    script(src="/js/main.js")

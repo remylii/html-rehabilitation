@@ -1,6 +1,14 @@
 @import "~normalize.css";
 @import 'base';
 
+.main {
+  padding: 0 10px;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
 .box {
   width: 300px;
   height: 300px;

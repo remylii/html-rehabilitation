@@ -1,0 +1,11 @@
+extends ../_layouts/_article.pug
+
+block title
+  - var title = 'Ripple Effect Sample';
+  - var filename = '20180501_ripple_effect_sample';
+  title #{title}
+  link(rel="canonical", href="http://localhost/articles/"+filename+".html")
+
+block content
+  h1 #{title}
+  .box.ripple box-area

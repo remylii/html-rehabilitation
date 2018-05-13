@@ -342,9 +342,24 @@ template {
   font-weight: bold;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+  font-size: 1.6em;
+  color: #4a4a4a;
+  background-color: #fff;
   box-sizing: border-box;
+}
+
+.main {
+  padding: 0 10px;
+}
+
+.article {
+  margin-bottom: 20px;
 }
 
 .box {

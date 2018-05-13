@@ -1,0 +1,16 @@
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    block title
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    link(rel="stylesheet", href="/css/App.css")
+  body
+    header
+      include ../_partials/_header.pug
+    main.main
+      article.article
+        block content
+    footer
+      | Footer content area
+    script(src="/js/main.js")
