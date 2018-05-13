@@ -30,13 +30,5 @@ module.exports = {
     modules: [
       "node_modules", path.resolve(__dirname, "src/js")
     ]
-  },
-
-  devServer: {
-    contentBase: path.resolve(__dirname, 'src/assets'),
-    compress: true,
-    historyApiFallback: true,
-    watchContentBase: true,
-    hot: true
   }
 }
