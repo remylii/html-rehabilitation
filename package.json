@@ -30,6 +30,7 @@
     "normalize.css": "^8.0.0",
     "pug": "^2.0.3",
     "pug-cli": "github:pugjs/pug-cli#master",
+    "request": "^2.85.0",
     "watch": "^1.0.2",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
